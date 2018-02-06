@@ -2,7 +2,6 @@ var img;
 var wid;
 var hgt;
 
-
 var nw=300;
 var nh=300;
 

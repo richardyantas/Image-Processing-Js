@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Image Processing</h1>
+  <p>Algorithms done in javascript with Webgl</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Options</h3>
+      <div class="btn-group-vertical">
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          View <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a onclick="zoomMinus(ctx);">Reduce</a></li>
+            <li><a onclick="zoomMore(ctx);">Enlarge</a></li>
+            <li><a onclick="rotate(ctx);">Rotate</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Convolution <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Tablet</a></li>
+            <li><a href="#">Smartphone</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Morphology <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Dilatation</a></li>
+            <li><a href="#">Erosion</a></li>
+          </ul>
+        </div>
+        <button type="button" class="btn btn-primary">Fourier T2D</button>        
+        
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Equalization <span class="caret"></span></button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a onclick="grayScale(ctx);">Gray Scale</a></li>
+            <li><a onclick="histogram(ctx);">Smartphone</a></li>
+          </ul>
+        </div>
+
+      </div> 
+    </div>
+
+    <div class="col-sm-4">
+      <h3>Canvas Js Webgl</h3>        
+      <p>The image is project in a canvas 300x300</p>     
+      <canvas id="canvas"></canvas>
+      <input type="text" id="filename" style="width: 300px;" value="./img/chaplin.jpg">
+      <input type="button" id="load" style="width: 100px;" onclick="loadImages();" value="Load Image"><br>
+    </div>
+
+    <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
